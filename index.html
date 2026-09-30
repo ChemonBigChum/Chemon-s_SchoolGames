@@ -1,34 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Game Hub</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <header>
-        <h1>🎮 Game Hub</h1>
-        <input id="search" type="text" placeholder="Search games...">
+        <h1>🎮 Game Hub By Chemon Dih</h1>
+
+        <input
+            id="search"
+            type="text"
+            placeholder="Search games..."
+        >
     </header>
 
+
     <main id="games">
-        <button onclick="openGame('games/game1/index.html')">
-            Game 1
+
+        <button onclick="openGame('https://dnrweqffuwjtx.cloudfront.net/games/2024/cube/friday-night-funkin/index.html')">
+            <img class="game-image" src="images/FridayNightFunkin.webp" alt="Friday Night Funkin'">
+            <span>Friday Night Funkin'</span>
         </button>
 
-        <button onclick="openGame('games/game2/index.html')">
-            Game 2
+        <button onclick="openGame('https://d3tecwpbnz01jy.cloudfront.net/games/2025/unity3/crazy-cattle-3d/index.html')">
+            <img class="game-image" src="images/crazy-cattle-3d-unblocked-m330x330.webp" alt="Crazy Cattle 3d'">
+            <span>Crazy Cattle 3d'</span>
         </button>
+
     </main>
 
+
+    <!-- Game player -->
     <div id="gameWindow" class="hidden">
-        <button onclick="closeGame()">← Back</button>
-        <iframe id="gameFrame"></iframe>
+
+        <div class="gameTopbar">
+
+            <button onclick="closeGame()">
+                ← Back
+            </button>
+
+            <span>🎮 Test Game</span>
+
+        </div>
+
+
+        <iframe
+            id="gameFrame"
+            allowfullscreen>
+        </iframe>
+
     </div>
-    
+
 
     <script src="script.js"></script>
+
 </body>
+
 </html>
