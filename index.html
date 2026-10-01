@@ -1,56 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Game Hub</title>
+    <title>Chemon's Game Hub</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>🎮 Game Hub By Chemon Dih</h1>
+    <header class="site-header">
 
-        <input
-            id="search"
-            type="text"
-            placeholder="Search games..."
-        >
+        <nav class="navbar">
+
+            <div class="logo">
+                <span class="logo-icon"><img src="images/Chemonpfp.png" alt="Chemon's Game Hub Logo" width=50" height="45"></span>
+                <span>Chemon's <span class="accent"> Game Hub</span></span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#games">Games</a>
+                <a href="#about">About</a>
+            </div>
+
+        </nav>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    🎮 PLAY SOMETHING
+                </div>
+
+                <h1>
+                    Welcome to <span>Chemon's Game Hub</span>
+                </h1>
+
+                <p>
+                    Only 4 games so far. More in the future doe.
+                </p>
+
+                <div class="search-wrapper">
+                    <span class="search-icon">🔍</span>
+
+                    <input
+                        id="search"
+                        type="text"
+                        placeholder="Search games..."
+                        autocomplete="off"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
     </header>
 
 
-    <main id="games">
+    <!-- MAIN CONTENT -->
+    <main>
 
-        <button onclick="openGame('https://dnrweqffuwjtx.cloudfront.net/games/2024/cube/friday-night-funkin/index.html')">
-            <img class="game-image" src="images/FridayNightFunkin.webp" alt="Friday Night Funkin'">
-            <span>Friday Night Funkin'</span>
-        </button>
+        <section class="games-section" id="games">
 
-        <button onclick="openGame('https://d3tecwpbnz01jy.cloudfront.net/games/2025/unity3/crazy-cattle-3d/index.html')">
-            <img class="game-image" src="images/crazy-cattle-3d-unblocked-m330x330.webp" alt="Crazy Cattle 3d'">
-            <span>Crazy Cattle 3d'</span>
-        </button>
+            <div class="section-header">
+
+                <div>
+                    <p class="section-label">LIBRARY</p>
+                    <h2>Featured Games</h2>
+                </div>
+
+                <div class="game-count">
+                    <span id="gameCount">4</span> Games
+                </div>
+
+            </div>
+
+
+            <div class="games-grid">
+
+                <!-- Friday Night Funkin -->
+                <button
+                    class="game-card"
+                    data-name="Friday Night Funkin"
+                    onclick="openGame('https://dnrweqffuwjtx.cloudfront.net/games/2024/cube/friday-night-funkin/index.html')"
+                >
+
+                    <div class="image-container">
+                        <img
+                            class="game-image"
+                            src="images/FridayNightFunkin.webp"
+                            alt="Friday Night Funkin"
+                        >
+
+                        <div class="play-overlay">
+                            ▶
+                        </div>
+                    </div>
+
+                    <div class="game-info">
+                        <h3>Friday Night Funkin'</h3>
+                        <p>Rhythm • Music</p>
+                    </div>
+
+                </button>
+
+
+                <!-- Crazy Cattle 3D -->
+                <button
+                    class="game-card"
+                    data-name="Crazy Cattle 3D"
+                    onclick="openGame('https://d3tecwpbnz01jy.cloudfront.net/games/2025/unity3/crazy-cattle-3d/index.html')"
+                >
+
+                    <div class="image-container">
+                        <img
+                            class="game-image"
+                            src="images/crazy-cattle-3d-unblocked-m330x330.webp"
+                            alt="Crazy Cattle 3D"
+                        >
+
+                        <div class="play-overlay">
+                            ▶
+                        </div>
+                    </div>
+
+                    <div class="game-info">
+                        <h3>Crazy Cattle 3D</h3>
+                        <p>Action • Funny</p>
+                    </div>
+
+                </button>
+
+
+                <!-- Melon Sandbox -->
+                <button
+                    class="game-card"
+                    data-name="Melon Sandbox"
+                    onclick="openGame('https://melonplaygroundgame.org/melon-sandbox.embed')"
+                >
+
+                    <div class="image-container">
+                        <img
+                            class="game-image"
+                            src="images/melon-sandbox.webp"
+                            alt="Melon Sandbox"
+                        >
+
+                        <div class="play-overlay">
+                            ▶
+                        </div>
+                    </div>
+
+                    <div class="game-info">
+                        <h3>Melon Sandbox</h3>
+                        <p>Sandbox • Physics</p>
+                    </div>
+
+                </button>
+
+
+                <!-- Tunnel Road -->
+                <button
+                    class="game-card"
+                    data-name="Tunnel Road"
+                    onclick="openGame('https://d3tecwpbnz01jy.cloudfront.net/games/2025/rhm/tunnel-road/index.html')"
+                >
+
+                    <div class="image-container">
+                        <img
+                            class="game-image"
+                            src="images/tunnel-road-freezenova.webp"
+                            alt="Tunnel Road"
+                        >
+
+                        <div class="play-overlay">
+                            ▶
+                        </div>
+                    </div>
+
+                    <div class="game-info">
+                        <h3>Tunnel Road</h3>
+                        <p>Arcade • Speed</p>
+                    </div>
+
+                </button>
+
+            </div>
+
+            <div id="noResults" class="no-results">
+                <div>🔎</div>
+                <h3>No games found</h3>
+                <p>Try searching for something else.</p>
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about-section" id="about">
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    🎮
+                </div>
+
+                <div>
+                    <p class="section-label">ABOUT</p>
+
+                    <h2>Game Hub</h2>
+
+                    <p>
+                        A simple place to discover and play browser games.
+                        Pick a game, hit play, and have fun.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
 
 
-    <!-- Game player -->
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                🎮 <strong>Game Hub</strong>
+            </div>
+            <p>
+                Game Hub is made by Chemon. Website still in development. Some games may be blocked or unable to be accessed.
+            </p>
+            <p class="copyright">
+                © 2026 Game Hub. All rights reserved.
+            </p>
+            <p>
+                Tiktok: <a href="https://www.tiktok.com/@chemonandportul" target="_blank">@chemon</a>
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- GAME PLAYER -->
     <div id="gameWindow" class="hidden">
 
         <div class="gameTopbar">
 
-            <button onclick="closeGame()">
+            <button
+                class="back-button"
+                onclick="closeGame()"
+            >
                 ← Back
             </button>
 
-            <span>🎮 Test Game</span>
+            <div class="game-title">
+                🎮 <span id="currentGame">Game</span>
+            </div>
 
         </div>
-
 
         <iframe
             id="gameFrame"
@@ -63,5 +275,4 @@
     <script src="script.js"></script>
 
 </body>
-
 </html>
